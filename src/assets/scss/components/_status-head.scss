@@ -1,0 +1,31 @@
+.status-head {
+    &__wrap {
+        padding: 15px 10px;
+        background-color: #fff;
+        box-shadow: 0 0 15px 0 rgba(80 54 234 / 6%);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-radius: 5px;
+    }
+
+    &__title {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__current-status {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    &__tag {
+        background: #ccd9f5;
+        color: var(--main);
+        padding: 5px 8px;
+        border-radius: 5px;
+    }
+
+}

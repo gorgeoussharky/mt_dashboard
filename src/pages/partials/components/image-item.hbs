@@ -1,0 +1,16 @@
+{{assign blockClass="image-item" }}
+
+    <li class="{{class}} {{blockClass}}">
+        <div class="{{blockClass}}__wrap">
+            <div class="{{blockClass}}__head">
+                {{item.title}}
+                {{#if item.tag}}
+                    <div class="{{blockClass}}__tag">{{item.tag}}</div>
+                {{/if}}
+            </div>
+
+            <div class="{{blockClass}}__img">
+
+            </div>
+        </div>
+    </li>

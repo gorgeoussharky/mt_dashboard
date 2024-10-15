@@ -1,0 +1,36 @@
+<div class="data-table">
+    {{#if table.title}}
+        <div class="data-table__title">{{table.title}}</div>
+    {{/if}}
+    <div class="data-table__wrap">
+        <table class="data-table__table {{#if transparentHead}}data-table__table--transparent-head{{/if}}">
+            <thead>
+                <tr>
+                    {{#each table.head}}
+                        <th scope="col">{{this}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each table.rows}}
+                    <tr>
+                        {{#each this}}
+                            <td>
+                                {{#if this.img}}
+                                    <div class="data-table__img"></div>
+                                {{/if}}
+                                {{#if this.tag}}
+                                    <div class="data-table__tag">{{this.tag}}</div>
+                                {{/if}}
+                                {{#if this.text}}
+                                    {{this.text}}
+                                {{/if}}
+                            </td>
+                        {{/each}}
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

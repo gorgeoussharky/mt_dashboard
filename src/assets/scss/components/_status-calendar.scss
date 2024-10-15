@@ -1,0 +1,134 @@
+.status-calendar {
+    &__list {
+        display: flex;
+        gap: 8px;
+    }
+}
+
+.calendar-period {
+    &__wrap {
+        position: relative;
+        padding-bottom: 70px;
+    }
+
+    &__days {
+        display: flex;
+        gap: 8px;
+        position: relative;
+    }
+
+    &__item-head {
+        position: relative;
+    }
+
+    &__range {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        opacity: 0.5;
+    }
+
+    &__progress {
+        height: 5px;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        border-radius: 0 0 0 5px;
+    }
+
+    &__day {
+        font-weight: 600;
+        color: var(--main);
+        text-align: center;
+
+        span {
+            margin-top: 12px;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            color: #000;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+    }
+
+    &__foot {
+        top: calc(100% - 65px);
+        left: 0;
+        position: absolute;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        width: 230px;
+        margin-top: 8px;
+    }
+
+    &__tag {
+        border-radius: 5px;
+        padding: 4px 8px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 12px;
+        white-space: nowrap;
+
+        &--blue {
+            background-color: var(--main);
+        }
+
+        &--purple {
+            background-color: #706eff;
+        }
+
+        &--mint {
+            background-color: #50d4af;
+        }
+    }
+
+    &__finished {
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    &__title {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    &--blue {
+        .calendar-period__range {
+            background: rgba(0 67 206 / 20%);
+        }
+
+        .calendar-period__progress {
+            background-color: var(--main);
+        }
+    }
+
+    &--purple {
+        .calendar-period__range {
+            background:  rgba(130 128 255 / 45%);
+        }
+
+        .calendar-period__progress {
+            background-color: #706eff;
+        }
+    }
+
+    &--mint {
+        .calendar-period__range {
+            background: rgba(22 219 170 / 20%);
+        }
+
+        .calendar-period__progress {
+            background-color: #50d4af;
+        }
+    }
+}

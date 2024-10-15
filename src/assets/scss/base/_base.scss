@@ -23,91 +23,26 @@ html {
 }
 
 body {
-    font-family: Geologica, sans-serif;
+    font-family: Inter, sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    padding-top: 120px;
-
-    @include media-breakpoint-down(md) {
-        padding-bottom: 32px;
-        padding-top: 56px;
-    }
-
-    &:has(.error-page--no-header) {
-        padding: 0;
-
-        .top-btn {
-            display: none;
-        }
-    }
-}
-
-.locked {
-    overflow: hidden;
-}
-
-%sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    background: linear-gradient(110deg, #fff 30%, #c9dbff 100%);
 }
 
 .container {
-    max-width: 1352px;
+    max-width: 1265px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 15px;
     width: 100%;
 }
 
-.overlay {
-    display: none;
-    background-color: rgba(#000, 0.3);
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 900;
-}
-
-.map {
-    &__marker {
-        width: 70px;
-        height: 70px;
-
-        svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        @include media-breakpoint-down(md) {
-            width: 48px;
-            height: 48px;
-        }
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
     }
-}
 
-.errortext {
-    margin-bottom: 10px;
-    display: block;
-    font-size: 14px;
-}
-
-.empty-title {
-    padding: 6px;
-    font-size: 16px;
-    height: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 400;
-
-    @include media-breakpoint-down(md) {
-        height: auto;
+    100% {
+        transform: translate(-100%, 0);
     }
 }

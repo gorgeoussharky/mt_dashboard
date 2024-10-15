@@ -8,12 +8,14 @@
     ],
     "dependencies": {
         "@floating-ui/dom": "^1.6.3",
+        "@types/progressbar.js": "^1.1.7",
         "@yandex/ymaps3-types": "^0.0.28",
         "bootstrap": "^5.3.3",
         "imask": "^7.6.1",
         "jest": "^29.7.0",
         "lenis": "^1.1.13",
-        "motion": "^10.18.0"
+        "motion": "^10.18.0",
+        "progressbar.js": "^1.1.1"
     },
     "devDependencies": {
         "@types/node": "^22.7.3",

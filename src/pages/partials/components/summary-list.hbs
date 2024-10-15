@@ -1,0 +1,104 @@
+{{assign blockClass="summary-list"}}
+
+<div class="{{class}} {{blockClass}}">
+    <ul class="{{blockClass}}__list">
+        <li class="{{blockClass}}__summary-item summary-item">
+            <div class="summary-item__head">
+                4 вопроса
+            </div>
+
+            <div class="summary-item__subtasks">
+                <div class="summary-item__title">{{list.[0].title}}</div>
+                <ul class="summary-item__list">
+                   {{#each list.[0].items}}
+                        <li class="summary-item__sub-item">
+                            {{this.label}}
+                            {{#if this.hasLink}}
+                                <a class="summary-item__sub-link" aria-label="Ссылка на {{this.label}}" href="/">
+                                    {{> utils/sprite name="link" width="20" height="20" }}
+                                </a>
+                            {{/if}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </li>
+
+        <li class="{{blockClass}}__summary-item summary-item">
+            <div class="summary-item__head">
+                7 дней
+                <span>до завершения разработки</span>
+
+                <div class="summary-item__progress-bar">
+                    <div
+                        class="summary-item__progress"
+                        style="width: 33%;"
+                    ></div>
+                </div>
+            </div>
+
+            <div class="summary-item__subtasks">
+                <div class="summary-item__title">{{list.[1].title}}</div>
+                <ul class="summary-item__list">
+                    {{#each list.[1].items}}
+                        <li class="summary-item__sub-item">
+                            {{this.label}}
+                            {{#if this.hasLink}}
+                                <a class="summary-item__sub-link" aria-label="Ссылка на {{this.label}}" href="/">
+                                    {{> utils/sprite name="link" width="20" height="20" }}
+                                </a>
+                            {{/if}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </li>
+
+        <li class="{{blockClass}}__summary-item summary-item">
+            <div class="summary-item__head">
+                8 писем
+                <span>последнее от 03.10.24</span>
+            </div>
+
+            <div class="summary-item__subtasks">
+                <div class="summary-item__title">{{list.[2].title}}</div>
+                <ul class="summary-item__list">
+                   {{#each list.[2].items}}
+                        <li class="summary-item__sub-item">
+                            {{this.label}}
+                            {{#if this.hasLink}}
+                                <a class="summary-item__sub-link" aria-label="Ссылка на {{this.label}}" href="/">
+                                    {{> utils/sprite name="link" width="20" height="20" }}
+                                </a>
+                            {{/if}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </li>
+
+        <li class="{{blockClass}}__summary-item summary-item">
+            <div class="summary-item__head">
+                <div class="summary-item__progress-circle" data-progress-circle data-progress="30">
+                    30%
+                </div>
+            </div>
+
+            <div class="summary-item__subtasks">
+                <div class="summary-item__title">{{list.[3].title}}</div>
+                <ul class="summary-item__list">
+                   {{#each list.[3].items}}
+                        <li class="summary-item__sub-item">
+                            {{this.label}}
+                            {{#if this.hasLink}}
+                                <a class="summary-item__sub-link" aria-label="Ссылка на {{this.label}}" href="/">
+                                    {{> utils/sprite name="link" width="20" height="20" }}
+                                </a>
+                            {{/if}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,26 @@
+<!-- Название страницы: Дашборд -->
+{{> layout/header title="Dashboard"}}
+
+<main class="dashboard">
+    {{> blocks/statuses list=statuses }}
+
+    {{#partial 'tabs-content'}}
+        <div class="tabs__content" style="display: block" data-tabs-content="building">
+            {{> blocks/building-status images=building_images list=calendar_1 }}
+        </div>
+
+        <div class="tabs__content" data-tabs-content="equipment">
+            {{> blocks/equipment-status images=equipment_images list=calendar_1 }}
+        </div>
+
+        <div class="tabs__content" data-tabs-content="integration">
+            {{> blocks/integration-status }}
+        </div>
+    {{/partial}}
+
+    <div class="container">
+        {{> components/tabs class="dashboard__tabs" tabs=tabs }}
+    </div>
+</main>
+
+{{> layout/footer}}

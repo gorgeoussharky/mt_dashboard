@@ -1,0 +1,27 @@
+{{assign class="status-block"}}
+
+<div class="{{class}}">
+    <div class="{{class}}__wrap">
+        {{> components/status-head class="status-block__status-head" title="ФИЛАТОВСКАЯ" status="Производство" }}
+
+        {{> components/status-calendar class="status-block__status-calendar" list=list }}
+
+        <ul class="{{class}}__info-list">
+            <li class="{{class}}__info-item">
+                {{> components/data-table transparentHead=true table=table_2 class="status-block__data-table" }}
+            </li>
+
+            {{> components/image-item item=equipment_image_single class="status-block__image-item" }}
+        </ul>
+
+        <div class="{{class}}__images-heading">ФОТО УСТАНВАВЛИВАЕМОГО ОБОРУДОВАНИЯ</div>
+        <ul class="{{class}}__images">
+            {{#each images}}
+                {{> components/image-item item=this class="status-block__image-item image-item--reverse"  }}
+            {{/each}}
+        </ul>
+
+
+        {{> components/data-table table=table_1 class="status-block__data-table" }}
+    </div>
+</div>

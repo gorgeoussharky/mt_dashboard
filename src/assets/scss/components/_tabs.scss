@@ -1,0 +1,22 @@
+.tabs {
+    &__head {
+        margin-bottom: 22px;
+    }
+
+    &__content {
+        display: none;
+    }
+}
+
+.select {
+    &__control {
+        font-weight: 800;
+        font-size: 18px;
+        color: var(--main);
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 1.41345L7 5.41345L12 1.41345' stroke='%230043CE' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+        padding: 12px;
+        padding-right: 28px;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+}

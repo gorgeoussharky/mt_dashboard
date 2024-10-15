@@ -1,0 +1,25 @@
+{{assign class="tasks-block"}}
+
+<div class="{{class}}">
+    <div class="container">
+        <div class="{{class}}__wrap">
+            <ul class="{{class}}__list">
+                {{#each list}}
+                    <li class="tasks-block__task-col task-col">
+                        <div class="task-col__wrap">
+                            <div class="task-col__title">{{this.title}}</div>
+
+                            <ul class="task-col__list">
+                                {{#each this.items}}
+                                    <li class="task-col__item">
+                                        {{this}}
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

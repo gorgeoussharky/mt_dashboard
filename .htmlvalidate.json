@@ -14,6 +14,8 @@
       "valid-id": "off",
       "no-autoplay": "off",
       "long-title": "off",
-      "no-inline-style": "off"
+      "no-inline-style": "off",
+      "element-permitted-content": "warn",
+      "deprecated": "warn"
     }
   }

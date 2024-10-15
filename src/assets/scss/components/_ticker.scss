@@ -1,0 +1,22 @@
+.ticker {
+    &__wrap {
+        background: linear-gradient(90deg, #4880ff 0%, #2b4d99 100%);
+        padding: 10px 0;
+        color: #fff;
+    }
+
+    &__content {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 20px;
+    }
+
+    &__list {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+}

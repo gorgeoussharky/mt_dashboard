@@ -1,0 +1,40 @@
+{{assign blockClass="status-calendar"}}
+
+<div class="{{class}} {{blockClass}}">
+    <ul class="{{blockClass}}__list">
+        {{#each list}}
+            <li
+                class="{{../blockClass}}__calendar-period calendar-period {{#if this.color}} calendar-period--{{this.color}} {{/if}}">
+                {{assign itemClass="calendar-period"}}
+                <div class="{{itemClass}}__wrap">
+                    <div class="{{itemClass}}__item-head">
+                        <ul class="{{itemClass}}__days">
+                            {{#each this.dates}}
+                                <li class="{{../itemClass}}__day">
+                                    {{day}}
+
+                                    <span>{{dayNumber}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <div class="{{itemClass}}__range" {{#if hasOffset}} style="left: -8.5%; width: 108.5%;" {{/if}}></div>
+                        <div class="{{itemClass}}__progress" style="width: {{this.width}}%"></div>
+                    </div>
+
+                    {{#if this.status}}
+                        <div class="{{itemClass}}__foot">
+                            <div class="{{itemClass}}__tag {{itemClass}}__tag--{{this.color}}">
+                                {{this.status}}
+                            </div>
+
+                            <div class="{{itemClass}}__info">
+                                <div class="{{itemClass}}__finished">{{this.finished}}</div>
+                                <div class="{{itemClass}}__title">{{this.title}}</div>
+                            </div>
+                        </div>
+                    {{/if}}
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

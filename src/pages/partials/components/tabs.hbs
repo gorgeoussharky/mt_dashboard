@@ -1,0 +1,20 @@
+<div class="tabs" data-tabs>
+    <div class="tabs__wrap">
+        <div class="tabs__head">
+            <div class="tabs__select select">
+                <label class="select__wrap">
+                    <select class="select__control" data-tabs-control>
+                        {{#each (slice tabs 0 1)}}
+                            <option selected value="{{this.value}}">{{this.label}}</option>
+                        {{/each}}
+                        {{#each (slice tabs 1 100)}}
+                            <option value="{{this.value}}">{{this.label}}</option>
+                        {{/each}}
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        {{#block 'tabs-content'}}{{/block}}
+    </div>
+</div>

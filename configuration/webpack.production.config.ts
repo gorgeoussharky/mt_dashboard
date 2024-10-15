@@ -104,12 +104,12 @@ const config: Configuration = merge(baseConfig, {
                     },
                 },
             }),
-            new CopyPlugin({
-                patterns: [
-				  { from: "public/favicon", to: "assets/favicon" },
-                  { from: "public/ogp.jpg" },
-                ],
-              }),
+            // new CopyPlugin({
+            //     patterns: [
+			// 	  { from: "public/favicon", to: "assets/favicon" },
+            //       { from: "public/ogp.jpg" },
+            //     ],
+            //   }),
         ],
     },
 

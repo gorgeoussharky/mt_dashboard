@@ -1,0 +1,45 @@
+.tasks-block {
+    &__wrap {
+        padding: 50px 0;
+    }
+
+    &__list {
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    &__task-col {
+        height: 100%;
+    }
+}
+
+.task-col {
+    &__wrap {
+        padding: 12px 15px;
+        box-shadow: 0 0 15px 0 rgba(80 54 234 / 6%);
+        background: rgba(0 67 206 / 15%);
+        height: 100%;
+    }
+
+    &__title {
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--main);
+    }
+
+    &__list {
+        display: grid;
+        gap: 10px;
+    }
+
+    &__item {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 15px 0 rgba(80 54 234 / 6%);
+        line-height: 137%;
+        color: #202224;
+    }
+}

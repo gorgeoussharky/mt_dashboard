@@ -1,0 +1,47 @@
+.image-item {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__head {
+        text-align: center;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        color: #3f5785;
+        text-transform: uppercase;
+    }
+
+    &__tag {
+        border-radius: 4px;
+        background-color: #fff;
+        padding: 4px 12px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    &__img {
+        width: 100%;
+        height: 240px;
+        border: 1px solid #b3b3b3;
+
+        img,
+        svg,
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &--reverse {
+        .image-item__wrap {
+            flex-direction: column-reverse;
+        }
+    }
+}

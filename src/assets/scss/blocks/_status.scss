@@ -1,0 +1,34 @@
+.status-block {
+    &__wrap {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    &__images {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__additional-info {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1070px;
+    }
+
+    &__info-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+    }
+
+    &__images-heading {
+        font-weight: 700;
+        color: #3f5785;
+    }
+}
+
+

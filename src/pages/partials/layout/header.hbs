@@ -8,30 +8,13 @@
     <title>
         {{title}}
     </title>
-    <meta name="description" content="{{ meta.description }}">
+    <meta name="description" content="">
     <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="{{meta.themeColor}}">
-    <!-- OGP Settings -->
-    <meta property="og:title"
-        content="{{title}}">
-    <meta property="og:type" content="{{ meta.ogType }}">
-    <meta property="og:image" content="{{ meta.ogImage }}">
-    <meta property="og:url" content="{{ meta.url }}">
-    <meta property="og:description" content="{{ meta.description }}">
-    <meta property="og:site_name"
-        content="{{title}}">
-    <meta property="og:locale" content="{{ meta.locale }}">
-    <meta name="twitter:card" content="{{ meta.twitterCard }}">
-    <!--// OGP Settings -->
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-192x192.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <link href="@/assets/scss/index.scss" rel="stylesheet" />
     <script src="@/assets/ts/index.ts" defer></script>
@@ -39,3 +22,26 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <a href="/" class="header__logo">
+                    {{> utils/picture src='@/assets/img/logo.png' alt='logo' class='header__logo-img' }}
+
+                    <div class="header__logo-title">Status Board</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="ticker">
+        <div class="ticker__wrap">
+            <div class="container ticker__content">
+                <div class="ticker__title"> NEWS: </div>
+                <marquee class="ticker__list">
+                    Строители вышли на демонтаж в ГКБ Филатова • На производстве в Китае добавили робот верификатор • На
+                    производстве в Китае добавили робот верификатор
+                </marquee>
+            </div>
+        </div>
+    </div>
