@@ -1,0 +1,83 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "eslint-comments",
+        "jest",
+        "promise",
+        "unicorn"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:@typescript-eslint/stylistic-type-checked",
+        "plugin:eslint-comments/recommended",
+        "plugin:jest/recommended",
+        "plugin:promise/recommended",
+        "plugin:unicorn/recommended",
+        "prettier"
+    ],
+    "rules": {
+        "no-new": "off",
+        "no-param-reassign": ["error", { "props": false }],
+        "no-continue": "off",
+        "no-void": ["error", { "allowAsStatement": true }],
+        "import/no-dynamic-require": "off",
+        "unicorn/prefer-module": "off",
+        "unicorn/switch-case-braces": "off",
+        "no-restricted-syntax": "off",
+        "import/prefer-default-export": "off",
+        "consistent-return": ["warn", { "treatUndefinedAsUnspecified": false }],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    "./configuration/*.ts",
+                    "./utils/**/*.ts",
+                    "webpack.config.ts",
+                    "./src/pages/helpers/*.ts"
+                ]
+            }
+        ],
+        "unicorn/prevent-abbreviations": [
+            "error",
+            {
+                "replacements": {
+                    "e": {
+                        "event": false
+                    },
+                    "res": false,
+                    "cmd": {
+                        "command": true
+                    },
+                    "args": {
+                        "arguments": false
+                    },
+                    "src": {
+                        "source": false
+                    },
+                    "ext": {
+                        "extension": false
+                    },
+                    "el": {
+                        "element": false
+                    },
+                    "prev": {
+                        "previous": false
+                    }
+                }
+            }
+        ]
+    }
+}

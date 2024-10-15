@@ -1,0 +1,19 @@
+{
+    "extends": [
+      "html-validate:recommended",
+      "html-validate:document",
+      "html-validate:prettier",
+      "html-validate:browser"
+    ],
+    "rules": {
+      "close-order": "error",
+      "no-trailing-whitespace": "off",
+      "no-raw-characters": "off",
+      "require-sri": "off",
+      "attribute-boolean-style": "warn",
+      "valid-id": "off",
+      "no-autoplay": "off",
+      "long-title": "off",
+      "no-inline-style": "off"
+    }
+  }

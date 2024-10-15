@@ -1,0 +1,54 @@
+.socials {
+    &__list {
+        @include unlist;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link {
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        svg path {
+            transition: 500ms;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            svg path {
+                fill-opacity: 1;
+                transition: 500ms;
+            }
+        }
+    }
+
+    &--dark {
+        .socials__link {
+            svg path {
+                fill: #000;
+                fill-opacity: 1;
+            }
+
+            &:hover {
+                svg path {
+                    fill-opacity: 0.7;
+                }
+            }
+        }
+    }
+}

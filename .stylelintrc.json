@@ -1,0 +1,28 @@
+{
+    "customSyntax": "postcss-scss",
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-standard-scss",
+        "stylelint-prettier/recommended",
+        "stylelint-config-prettier-scss"
+    ],
+    "plugins": ["stylelint-scss", "stylelint-order", "stylelint-prettier"],
+    "syntax": "scss",
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+
+        "no-descending-specificity": "off",
+
+        "selector-class-pattern": [
+            "^[a-z]([-]?[a-z0-9]+)*(__[a-z0-9]([-]?[a-z0-9]+)*)?(--[a-z0-9]([-]?[a-z0-9]+)*)?$",
+            {
+                "resolveNestedSelectors": true
+            }
+        ]
+    }
+}

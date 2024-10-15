@@ -1,0 +1,32 @@
+<nav class='{{class}} breadcrumbs' aria-label='breadcrumb'>
+    <ol class='breadcrumbs__list'>
+        <li class='breadcrumbs__item'>
+            <a class='breadcrumbs__link' href='#'>
+                Главная
+            </a>
+        </li>
+
+        {{#unless parent}}
+            <li
+                class='breadcrumbs__item breadcrumbs__item--active'
+                aria-current='page'
+            >
+                {{page}}
+            </li>
+        {{/unless}}
+
+        {{#if parent}}
+            <li class='breadcrumbs__item'>
+                <a class='breadcrumbs__link' href='#'>
+                    {{parent}}
+                </a>
+            </li>
+            <li
+                class='breadcrumbs__item breadcrumbs__item--active'
+                aria-current='page'
+            >
+                {{page}}
+            </li>
+        {{/if}}
+    </ol>
+</nav>

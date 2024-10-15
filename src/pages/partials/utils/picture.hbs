@@ -1,0 +1,17 @@
+<picture {{#if class}} class='{{class}}' {{/if}}>
+
+    {{#if mobileSrc}}
+        {{#imageSize mobileSrc}}
+            <source srcset='{{src}}?w={{width}}&h={{width}}&as=avif 1x, {{src}}?as=avif 2x' type='image/avif'
+                media="(max-width: 767.98px)">
+            <source srcset='{{src}}?w={{width}}&h={{width}}&as=webp 1x, {{src}}?as=webp 2x' type='image/webp'
+                media="(max-width: 767.98px)">
+        {{/imageSize}}
+    {{/if}}
+
+    {{#imageSize src}}
+        <source srcset='{{src}}?w={{width}}&h={{height}}&as=avif 1x, {{src}}?as=avif 2x' type='image/avif'>
+        <img srcset="{{src}}?as=webp 2x" width="{{baseWidth}}" height="{{baseHeight}}"
+            src='{{src}}?w={{width}}&h={{height}}&as=webp' alt='{{alt}}'>
+    {{/imageSize}}
+</picture>

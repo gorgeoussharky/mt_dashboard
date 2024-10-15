@@ -1,0 +1,9 @@
+<div class='{{class}} checkbox' data-name="{{name}}">
+    <label class='checkbox__wrap'>
+        <input type='checkbox' name="{{name}}" class='checkbox__control' {{#if required}} required {{/if}} {{#if
+            checked}} checked {{/if}} />
+        <span class='checkbox__label'>
+            {{{label}}} {{#if count}} <span class="checkbox__count">{{count}}</span> {{/if}}
+        </span>
+    </label>
+</div>

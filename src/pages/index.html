@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список страниц</title>
+</head>
+
+<body>
+
+    <h1 class="pages__title">Список страниц</h1>
+
+    <ul class="pages__list">
+        <!-- Страница в списке -->
+        {{#each list}}
+            <li class="pages__item">
+                <a class="pages__link" href="{{this.url}}">{{this.title}}</a>
+            </li>
+        {{/each}}
+    </ul>
+
+</body>
+
+</html>

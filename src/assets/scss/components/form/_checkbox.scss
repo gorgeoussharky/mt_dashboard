@@ -1,0 +1,84 @@
+.checkbox {
+    &__wrap {
+        position: relative;
+        display: block;
+    }
+
+    &__label {
+        font-size: 12px;
+        font-variation-settings: "wght" 400;
+        color: #727272;
+        line-height: 120%;
+        padding-left: 26px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+
+        @include media-breakpoint-down(md) {
+            line-height: 140%;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            bottom: 0;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #727272;
+            border-radius: 4px;
+            transition: 500ms;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 9px;
+            bottom: 0;
+            left: 4px;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.73821 0.607368C10.0873 0.958848 10.0873 1.5287 9.73818 1.88016L4.26332 7.39241C3.91426 7.74386 3.34833 7.74387 2.99926 7.39243L0.261832 4.63643C-0.0872554 4.28497 -0.0872806 3.71512 0.261776 3.36363C0.610832 3.01215 1.17679 3.01212 1.52588 3.36358L3.63127 5.48325L8.47411 0.60734C8.82319 0.255876 9.38915 0.255888 9.73821 0.607368Z' fill='white'/%3E%3C/svg%3E%0A");
+            width: 10px;
+            height: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: 500ms;
+        }
+    }
+
+    &__control {
+        position: absolute;
+        opacity: 0;
+        z-index: -999;
+
+        &:checked + .checkbox__label {
+            &::after {
+                opacity: 1;
+                border-color: var(--graphite);
+                transition: 500ms;
+            }
+
+            &::before {
+                background-color: var(--graphite);
+                transition: 500ms;
+            }
+        }
+    }
+
+    &__notice {
+        display: none;
+    }
+
+    &__count {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--dark-gray);
+        position: absolute;
+        right: 0;
+    }
+}

@@ -1,0 +1,53 @@
+.accordion {
+    &__wrap {
+        width: 100%;
+        border-bottom: 1px solid #dfdfe6;
+        padding-bottom: 16px;
+
+        &.active {
+            .accordion__toggler {
+                span {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .accordion__content {
+                display: block;
+            }
+        }
+    }
+
+    &__toggler {
+        font-weight: 400;
+        font-size: 12px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        text-transform: uppercase;
+
+        span {
+            stroke: var(--graphite);
+            transform-origin: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 10px;
+            height: 10px;
+            display: flex;
+
+            img,
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+        margin-top: 24px;
+    }
+}
